@@ -1,25 +1,51 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deliverable1", "Deliverable1\Deliverable1.csproj", "{14988468-6BC4-443C-AB0D-26AD479300C0}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14988468-6BC4-443C-AB0D-26AD479300C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14988468-6BC4-443C-AB0D-26AD479300C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14988468-6BC4-443C-AB0D-26AD479300C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14988468-6BC4-443C-AB0D-26AD479300C0}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4821FC25-28FE-43BF-A383-C6CD5B3573C5}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace Deliverable1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string password;
+            string lower;
+            string upper;
+            string numeral;
+            int minNum = 7;
+            int maxNum = 12;
+         
+
+            Console.WriteLine("Enter a password");
+            string input = Console.ReadLine();
+            password = (input);
+
+
+            if (password > maxNum)
+            { Console.WriteLine("Error"); }
+
+            if (password < minNum)
+            { Console.WriteLine("Error"); }
+
+            int i;
+            for (i = 0; i < input; i++)
+            {
+
+                if (char.IsDigit(password))
+                { Console.WriteLine("Error"); }
+
+                if (char.IsUpper(password))
+                { Console.WriteLine("Error"); }
+
+                if (char.IsLower(password))
+                { Console.WriteLine("Error"); }
+
+                if (!char.IsLetterOrDigit(password))
+                { Console.WriteLine("Error"); }
+
+                else if
+                    { Console.WriteLine("Password valid and accepted"); }
+            }
+
+        }
+    }
+}
